@@ -1,0 +1,2 @@
+/usr/bin/ar qc /home/sergio/LogisticsPlanner/catkin_ws/devel/lib/libbridge.a CMakeFiles/bridge.dir/src/clips_bridge.cpp.o CMakeFiles/bridge.dir/src/clipswrapper.cpp.o CMakeFiles/bridge.dir/src/clipswrapperrouter.cpp.o CMakeFiles/bridge.dir/src/utils.cpp.o
+/usr/bin/ranlib /home/sergio/LogisticsPlanner/catkin_ws/devel/lib/libbridge.a

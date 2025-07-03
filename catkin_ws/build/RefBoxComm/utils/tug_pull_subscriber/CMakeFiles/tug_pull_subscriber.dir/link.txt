@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -shared -Wl,-soname,libtug_pull_subscriber.so -o /home/sergio/LogisticsPlanner/catkin_ws/devel/lib/libtug_pull_subscriber.so CMakeFiles/tug_pull_subscriber.dir/src/PullSubscriber.cpp.o 

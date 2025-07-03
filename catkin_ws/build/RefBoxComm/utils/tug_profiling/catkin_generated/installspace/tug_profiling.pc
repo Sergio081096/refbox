@@ -1,0 +1,8 @@
+prefix=/home/sergio/LogisticsPlanner/catkin_ws/install
+
+Name: tug_profiling
+Description: Description of tug_profiling
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -ltug_profiling
+Requires: roscpp tug_cfg

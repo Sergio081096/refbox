@@ -1,0 +1,22 @@
+;******************************************************************************
+;* File: final.wrl                                                            *
+;* Purpose: Definition of the forbidden and allowed areas in the Robot's      *
+;*          world. These areas are derivated from the objects in the          *
+;*          world.                                                            *
+;******************************************************************************
+
+( dimensions final 2.0 2.0 )
+
+; External walls
+( polygon wall wall1  0.25 0.70 0.25 0.80 0.30 0.80 0.30 0.70 )
+( polygon wall wall2  0.25 0.55 0.25 0.60 0.60 0.60 0.60 0.55 )
+( polygon wall wall3  0.60 0.55 0.60 0.70 0.61 0.70 0.61 0.55 )
+( polygon wall wall4  0.25 0.70 0.25 0.71 0.50 0.71 0.50 0.70 )
+( polygon wall wall5  0.25 1.25 0.25 1.50 0.30 1.50 0.30 1.25 )
+( polygon wall wall6  0.25 1.40 0.25 1.50 1.75 1.50 1.75 1.40 )
+( polygon wall wall7  1.70 1.25 1.70 1.40 1.75 1.40 1.75 1.25 )
+( polygon wall wall8  1.70 0.70 1.70 0.80 1.75 0.80 1.75 0.70 )
+( polygon wall wall9  1.50 0.70 1.50 0.71 1.75 0.71 1.75 0.70 )
+( polygon wall wall10 1.39 0.55 1.39 0.70 1.40 0.70 1.40 0.55 )
+( polygon wall wall11  1.39 0.55 1.39 0.60 1.75 0.60 1.75 0.55 )
+

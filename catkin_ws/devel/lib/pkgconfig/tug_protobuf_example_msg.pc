@@ -1,0 +1,8 @@
+prefix=/home/sergio/LogisticsPlanner/catkin_ws/devel
+
+Name: tug_protobuf_example_msg
+Description: Description of tug_protobuf_example_msg
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

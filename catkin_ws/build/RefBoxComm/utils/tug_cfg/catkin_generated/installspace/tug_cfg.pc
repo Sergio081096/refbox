@@ -1,0 +1,8 @@
+prefix=/home/sergio/LogisticsPlanner/catkin_ws/install
+
+Name: tug_cfg
+Description: Description of tug_cfg
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -ltug_cfg
+Requires: 

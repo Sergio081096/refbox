@@ -1,0 +1,81 @@
+Rings
+rings { ring_color: RING_ORANGE raw_material: 2 }
+rings { ring_color: RING_BLUE raw_material: 1 }
+
+
+Base station
+BS
+machines { name: "C-BS" type: "BS" state: "IDLE" team_color: CYAN 5: 122 6: 121 }
+machines { name: "M-BS" type: "BS" state: "IDLE" team_color: MAGENTA 5: 222 6: 221 } 
+machines { name: "M-BS" type: "BS" state: "IDLE" team_color: MAGENTA zone: M_Z33 rotation: 180 5: 222 6: 221 } 
+
+
+Ring station
+RS1
+machines { name: "C-RS1" type: "RS" state: "IDLE" team_color: CYAN ring_colors: RING_ORANGE ring_colors: RING_GREEN 5: 112 6: 111 }
+machines { name: "M-RS1" type: "RS" state: "IDLE" team_color: MAGENTA zone: M_Z34 rotation: 0 ring_colors: RING_ORANGE ring_colors: RING_GREEN 5: 212 6: 211 }
+RS2
+machines { name: "C-RS2" type: "RS" state: "IDLE" team_color: CYAN ring_colors: RING_BLUE ring_colors: RING_YELLOW 5: 114 6: 113 }
+machines { name: "M-RS2" type: "RS" state: "IDLE" team_color: MAGENTA zone: C_Z13 rotation: 270 ring_colors: RING_BLUE ring_colors: RING_YELLOW 5: 214 6: 213 }
+
+
+Cap station
+CS1
+machines { name: "C-CS1" type: "CS" state: "IDLE" team_color: CYAN 5: 102 6: 101 }
+machines { name: "M-CS1" type: "CS" state: "IDLE" team_color: MAGENTA zone: M_Z47 rotation: 0 5: 202 6: 201 }
+CS2
+machines { name: "C-CS2" type: "CS" state: "IDLE" team_color: CYAN 5: 104 6: 103 }
+machines { name: "M-CS2" type: "CS" state: "IDLE" team_color: MAGENTA zone: C_Z74 rotation: 270 5: 204 6: 203 }
+
+Delivery station
+DS
+machines { name: "C-DS" type: "DS" state: "IDLE" team_color: CYAN 5: 132 6: 131 }
+machines { name: "M-DS" type: "DS" state: "IDLE" team_color: MAGENTA 5: 232 6: 231 }
+machines { name: "M-DS" type: "DS" state: "IDLE" team_color: MAGENTA zone: M_Z64 rotation: 90 5: 232 6: 231 }
+
+
+Orders
+orders { id: 3 complexity: C0 base_color: BASE_SILVER cap_color: CAP_GREY quantity_requested: 1 quantity_delivered_cyan: 0 quantity_delivered_magenta: 0 delivery_period_begin: 253 delivery_period_end: 420 delivery_gate: 2 competitive: false } 
+
+orders { id: 1 complexity: C1 base_color: BASE_BLACK ring_colors: RING_GREEN cap_color: CAP_BLACK quantity_requested: 1 quantity_delivered_cyan: 0 quantity_delivered_magenta: 0 delivery_period_begin: 0 delivery_period_end: 1200 delivery_gate: 3 competitive: false } 
+
+orders { id: 2 complexity: C2 base_color: BASE_SILVER ring_colors: RING_GREEN ring_colors: RING_ORANGE cap_color: CAP_BLACK quantity_requested: 1 quantity_delivered_cyan: 0 quantity_delivered_magenta: 0 delivery_period_begin: 0 delivery_period_end: 1200 delivery_gate: 3 competitive: false } 
+
+orders { id: 4 complexity: C1 base_color: BASE_RED ring_colors: RING_GREEN cap_color: CAP_GREY quantity_requested: 1 quantity_delivered_cyan: 0 quantity_delivered_magenta: 0 delivery_period_begin: 379 delivery_period_end: 489 delivery_gate: 3 competitive: false } 
+
+orders { id: 7 complexity: C3 base_color: BASE_BLACK ring_colors: RING_BLUE ring_colors: RING_GREEN ring_colors: RING_BLUE cap_color: CAP_BLACK quantity_requested: 1 quantity_delivered_cyan: 0 quantity_delivered_magenta: 0 delivery_period_begin: 612 delivery_period_end: 772 delivery_gate: 2 competitive: false }
+
+
+routes { id: 1 route: M_Z13 route: M_Z52 route: M_Z35 route: M_Z24 route: M_Z43 route: M_Z21 route: M_Z22 route: M_Z14 route: M_Z53 route: M_Z25 route: M_Z54 route: M_Z15 remaining: M_Z13 remaining: M_Z52 remaining: M_Z35 remaining: M_Z24 remaining: M_Z43 remaining: M_Z21 remaining: M_Z22 remaining: M_Z14 remaining: M_Z53 remaining: M_Z25 remaining: M_Z54 remaining: M_Z15 }
+
+Storage Sation
+SS
+
+
+Example:
+rings { ring_color: RING_ORANGE raw_material: 2 }
+rings { ring_color: RING_BLUE raw_material: 1 }
+
+Base station
+machines { name: "C-BS" type: "BS" state: "IDLE" team_color: CYAN 5: 222 6: 221 } 
+machines { name: "C-BS" type: "BS" state: "IDLE" team_color: CYAN zone: M_Z33 rotation: 180 5: 222 6: 221 } 
+
+Cap station
+machines { name: "C-CS1" type: "CS" state: "IDLE" team_color: CYAN 5: 102 6: 101 }
+machines { name: "C-CS1" type: "CS" state: "IDLE" team_color: CYAN zone: M_Z47 rotation: 0 5: 202 6: 201 }
+
+Ring station
+machines { name: "C-RS2" type: "RS" state: "IDLE" team_color: CYAN ring_colors: RING_BLUE ring_colors: RING_YELLOW 5: 114 6: 113 }
+machines { name: "C-RS2" type: "RS" state: "IDLE" team_color: CYAN zone: C_Z13 rotation: 270 ring_colors: RING_BLUE ring_colors: RING_YELLOW 5: 214 6: 213 }
+
+Delivery station
+machines { name: "C-DS" type: "DS" state: "IDLE" team_color: CYAN 5: 232 6: 231 }
+machines { name: "C-DS" type: "DS" state: "IDLE" team_color: CYAN zone: M_Z64 rotation: 90 5: 232 6: 231 }
+
+Orders
+orders { id: 3 complexity: C0 base_color: BASE_SILVER cap_color: CAP_GREY quantity_requested: 1 quantity_delivered_cyan: 0 quantity_delivered_magenta: 0 delivery_period_begin: 253 delivery_period_end: 420 delivery_gate: 2 competitive: false } 
+
+
+
+
+

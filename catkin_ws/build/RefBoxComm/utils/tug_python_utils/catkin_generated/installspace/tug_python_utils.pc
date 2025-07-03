@@ -1,0 +1,8 @@
+prefix=/home/sergio/LogisticsPlanner/catkin_ws/install
+
+Name: tug_python_utils
+Description: Description of tug_python_utils
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

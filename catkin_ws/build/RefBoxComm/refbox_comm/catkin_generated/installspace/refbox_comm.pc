@@ -1,0 +1,8 @@
+prefix=/home/sergio/LogisticsPlanner/catkin_ws/install
+
+Name: refbox_comm
+Description: Description of refbox_comm
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -lrefbox_comm
+Requires: message_runtime

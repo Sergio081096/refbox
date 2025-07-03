@@ -1,0 +1,2 @@
+string type
+refbox_comm/RefboxData data

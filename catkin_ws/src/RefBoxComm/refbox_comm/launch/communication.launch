@@ -1,0 +1,4 @@
+<launch>
+	<node name="main_comms" pkg="refbox_comm" type="refbox_comm_node" output="screen">
+  	</node>
+</launch>

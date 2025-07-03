@@ -1,0 +1,8 @@
+prefix=/home/sergio/LogisticsPlanner/catkin_ws/install
+
+Name: tug_bresenham
+Description: Description of tug_bresenham
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -ltug_bresenham
+Requires: 

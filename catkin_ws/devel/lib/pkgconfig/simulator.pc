@@ -1,0 +1,8 @@
+prefix=/home/sergio/LogisticsPlanner/catkin_ws/devel
+
+Name: simulator
+Description: Description of simulator
+Version: 0.0.0
+Cflags: -I/home/sergio/LogisticsPlanner/catkin_ws/devel/include -I/home/sergio/LogisticsPlanner/catkin_ws/src/RefBoxComm/simulator/src
+Libs: -L${prefix}/lib 
+Requires: roscpp rospy std_msgs
