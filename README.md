@@ -18,6 +18,6 @@ rosrun refbox_comm fake_refbox_node
 rostopic pub /send_plan_msg std_msgs/String "data: '0'"
 
 
-# Para recibir el plan y enviar datos al robot
+# Para recibir el plan 
 
 rosrun refbox_comm main_to_robots_comm_node
