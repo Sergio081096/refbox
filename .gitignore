@@ -1,5 +1,3 @@
 #Cmake constructions 
-/build
-build/
-devel/
-/devel/
+catkin_ws/devel/
+catkin_ws/build/
