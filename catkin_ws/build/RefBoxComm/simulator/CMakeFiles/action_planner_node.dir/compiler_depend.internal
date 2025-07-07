@@ -24,7 +24,6 @@ RefBoxComm/simulator/CMakeFiles/action_planner_node.dir/src/action_planner/actio
  /home/sergio/LogisticsPlanner/catkin_ws/devel/include/simulator/ResetKDBRequest.h
  /home/sergio/LogisticsPlanner/catkin_ws/devel/include/simulator/ResetKDBResponse.h
  /home/sergio/LogisticsPlanner/catkin_ws/devel/include/simulator/SinglePlan.h
- /home/sergio/LogisticsPlanner/catkin_ws/devel/include/simulator/SpeechGeneration.h
  /home/sergio/LogisticsPlanner/catkin_ws/devel/include/simulator/planning_cmd.h
  /home/sergio/LogisticsPlanner/catkin_ws/devel/include/simulator/planning_cmdRequest.h
  /home/sergio/LogisticsPlanner/catkin_ws/devel/include/simulator/planning_cmdResponse.h

@@ -1,4 +1,6 @@
 <launch>
-	<node name="main_comms" pkg="refbox_comm" type="refbox_comm_node" output="screen">
-  	</node>
+	<!-- <node name="main_comms" pkg="refbox_comm" type="refbox_comm_node" output="screen"></node> -->
+	<node name="rosclips" 			   pkg="simulator" type="rosclips" output="screen"></node>
+	<!-- <node name="action_planner_node"   pkg="simulator" type="action_planner_node" output="screen"></node> -->
+	<!-- <node name="natural_language_node" pkg="simulator" type="natural_language_node" output="screen"></node> -->
 </launch>

@@ -1,0 +1,5 @@
+#Cmake constructions 
+/build
+build/
+devel/
+/devel/

@@ -1648,5 +1648,4 @@ RefBoxComm/simulator/CMakeFiles/action_planner_node.dir/src/action_planner/actio
  /home/sergio/LogisticsPlanner/catkin_ws/src/RefBoxComm/simulator/src/action_planner/../simulator_physics/prb_failure_actions.h \
  /home/sergio/LogisticsPlanner/catkin_ws/devel/include/simulator/ActionPlannerFindObject.h \
  /home/sergio/LogisticsPlanner/catkin_ws/devel/include/simulator/ActionPlannerManipulator.h \
- /home/sergio/LogisticsPlanner/catkin_ws/devel/include/simulator/SpeechGeneration.h \
  /home/sergio/LogisticsPlanner/catkin_ws/devel/include/simulator/SinglePlan.h

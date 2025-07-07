@@ -1655,4 +1655,5 @@ RefBoxComm/simulator/CMakeFiles/motion_planner_node.dir/src/motion_planner/motio
  /home/sergio/LogisticsPlanner/catkin_ws/devel/include/simulator/MotionPlanner.h \
  /home/sergio/LogisticsPlanner/catkin_ws/devel/include/simulator/FindObject.h \
  /home/sergio/LogisticsPlanner/catkin_ws/src/RefBoxComm/simulator/src/motion_planner/../action_planner/../simulator_physics/prb_failure_actions.h \
+ /home/sergio/LogisticsPlanner/catkin_ws/src/RefBoxComm/simulator/src/motion_planner/../action_planner/../simrep/SimuladorRepresentation.h \
  /home/sergio/LogisticsPlanner/catkin_ws/devel/include/simulator/ActionPlannerManipulator.h

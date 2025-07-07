@@ -343,6 +343,10 @@ int plans_debug(){
         if(message_no < debug_vector.size()){
             simulator::SinglePlan plan_msg;
             plan_msg.plan_steps = debug_vector[message_no];
+
+            std::cout << "publishing: " << plan_msg << std::endl;
+
+
             pub_plans.publish(plan_msg);
 
             message_no++;
@@ -356,7 +360,21 @@ int plans_debug(){
 
 
 void sendPlanCallback(const std_msgs::String::ConstPtr& send_plan_msg){
-    plans_debug();
+    std::string content = send_plan_msg->data;
+    int debug_type = std::stoi(content);
+    switch (debug_type) {
+        case 0:
+            ROS_INFO_STREAM("------refbox_debug--------- ");
+            refbox_debug();
+            break;
+        case 1:
+            ROS_INFO_STREAM("------plans_debug--------- ");
+            plans_debug();
+            break;
+        default:
+            std::cout << "no debug selected" << std::endl;
+            break;
+    }
 }
 
 

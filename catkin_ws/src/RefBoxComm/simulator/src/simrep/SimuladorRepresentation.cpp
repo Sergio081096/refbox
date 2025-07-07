@@ -151,7 +151,7 @@ bool SimuladorRepresentation::strQueryKDB(std::string query, std::string &result
         srv.request.query = query;
         if (cliQueryKDB->call(srv)) {
             std::string queryResult = srv.response.result;
-            std::cout << "SimuladorRepresentation.->Query Result:" << queryResult << std::endl;
+            // std::cout << "SimuladorRepresentation.->Query Result:" << queryResult << std::endl;
             if(queryResult.compare("None") == 0){
                 std::cout << "SimuladorRepresentation.->Query failed." << std::endl;
                 result = "";

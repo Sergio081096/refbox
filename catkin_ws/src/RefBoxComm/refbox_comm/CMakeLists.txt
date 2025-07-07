@@ -12,6 +12,7 @@ find_package(catkin REQUIRED COMPONENTS
   protobuf_comm
   refbox_protobuf_msgs
   message_generation
+  rospy
   )
 
 
@@ -222,4 +223,9 @@ target_link_libraries(main_to_robots_comm_node
 add_executable(fake_refbox_node src/fake_refbox_node.cpp)
 target_link_libraries(fake_refbox_node
   ${catkin_LIBRARIES}
+)
+
+catkin_install_python(PROGRAMS
+  scripts/planner.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )

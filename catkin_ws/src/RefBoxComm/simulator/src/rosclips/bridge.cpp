@@ -236,11 +236,15 @@ void Bridge::cmdLoadCallback(std_msgs::String::ConstPtr const& msg){
 //string ← f(string query)
 bool Bridge::srvQueryKDB(simulator::QueryKDB::Request& req, simulator::QueryKDB::Response& res){
 	qr.enable();
-	clips::sendCommand(req.query, true);
+	// if (req.query != "(assert (alive clips))")
+	// {
+		clips::sendCommand(req.query, true);		
+	// }
 	clips::run();
 	res.result = qr.read();
 	qr.disable();
 	return true;
+	
 }
 
 

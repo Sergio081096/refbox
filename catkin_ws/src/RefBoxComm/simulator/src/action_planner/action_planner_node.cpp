@@ -19,7 +19,6 @@
 #include "action_planner.h"
 #include "simulator/ActionPlannerFindObject.h"
 #include "simulator/ActionPlannerManipulator.h"
-#include "simulator/SpeechGeneration.h"
 
 #include "simulator/SinglePlan.h"
 
@@ -66,22 +65,10 @@ int main(int argc ,char **argv)
     // Node handle declaration for communication with ROS system
     ros::NodeHandle n;
 
-    // Declare publisher, create publisher action_planner_msg 
-    ros::Publisher action_planner_msg  = n.advertise<simulator::ActionPlanner>("action_planner_msg", 100);
-    simulator::ActionPlanner msg;
-    simulator::ActionPlanner msg1;
-
-    ros::Publisher speech_generation_msg  = n.advertise<simulator::SpeechGeneration>("speech_generation_msg", 100);
-
     ros::Publisher plan_publisher = n.advertise<simulator::SinglePlan>("/plan_msg", 1000);
-
-    simulator::SpeechGeneration msg_speech_generation;
-
 
     SimuladorRepresentation::setNodeHandle(&n);
     ros::Rate r(20);
-
-
 
    // it sets the environment's path
     strcpy(path,"./src/simulator/src/data/");
@@ -92,59 +79,50 @@ int main(int argc ,char **argv)
 
     printf("\n\n             PLANS EXECUTER %d \n________________________________\n",params_act.behavior);
 
+    // num_actions=action_planner(params_act.robot_x, params_act.robot_y,params_act.robot_theta,&plan,num_plan);
+
     while( ros::ok()  )
     {
+        ros::spinOnce();
 
-        while( params_act.run )
-        {
-                ros::spinOnce();
+        switch ( params_act.behavior) {
 
-                switch ( params_act.behavior) {
+                case 4:
+                        if(j > 1000){
+                                printf(" ******* SELECTION 4 %d *******\n",j++);
+                                j=0;
+                        }
 
-                        case 4:
-                                if(j > 1000){
-                                        printf(" ******* SELECTION 4 %d *******\n",j++);
-                                        j=0;
-                                }
-
-                                break;
-
-                        case 10:
-                                printf(" ******* SELECTION %d *******\n",params_act.behavior);
-                                ros::spinOnce();
-
-                                num_actions=action_planner(params_act.robot_x, params_act.robot_y,params_act.robot_theta,&plan,num_plan);
-
-                                printf("Num. accions %d\n",num_actions);
-                                for(i=num_plan; i< num_plan + num_actions;i++){
-                                        printf("\nPLAN to be executed: %d\n",i);
-
-                                        std::vector<std::string> plan_str(plan.num[i]);
-
-                                        for(k=1; k<= plan.num[i];k++){
-                                                //printf("	Subplan: %d %d %s",i,k,plan.action_plan[i][k]);
-                                                printf("plann:%s",plan.action_plan[i][k]);
-                                                plan_str[k-1] = plan.action_plan[i][k];//"El plaaaNNNNNNN";//
-                                        }
-
-                                        simulator::SinglePlan plan_msg;
-                                        plan_msg.plan_steps = plan_str;
-                                        plan_publisher.publish(plan_msg);
-                                }
-
-                                break;
-
-                        default:
-                                printf(" ******* SELECTION NO DEFINED %d *******\n",j++);
                         break;
-                }
 
+                case 10:
+                        printf(" ******* SELECTION %d *******\n",params_act.behavior);
+                        ros::spinOnce();
 
+                        num_actions=action_planner(params_act.robot_x, params_act.robot_y,params_act.robot_theta,&plan,num_plan);
+
+                        printf("Num. accions %d\n",num_actions);
+                        for(i=num_plan; i< num_plan + num_actions;i++){
+                                printf("\nPLAN to be executed: %d\n",i);
+
+                                std::vector<std::string> plan_str(plan.num[i]);
+
+                                for(k=1; k<= plan.num[i];k++){
+                                        printf("	Subplan: %d %d %s",i,k,plan.action_plan[i][k]);
+                                        printf("plann:%s",plan.action_plan[i][k]);
+                                        plan_str[k-1] = plan.action_plan[i][k];//"El plaaaNNNNNNN";//
+                                }
+
+                                simulator::SinglePlan plan_msg;
+                                plan_msg.plan_steps = plan_str;
+                                plan_publisher.publish(plan_msg);
+                        }
+
+                        break;
+
+                default:
+                        printf(" ******* SELECTION NO DEFINED %d *******\n",j++);
+                break;
         }
-
-
-
    }
-
-
 }

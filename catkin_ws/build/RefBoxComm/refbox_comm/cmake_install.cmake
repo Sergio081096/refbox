@@ -96,3 +96,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/refbox_comm" TYPE FILE FILES "/home/sergio/LogisticsPlanner/catkin_ws/src/RefBoxComm/refbox_comm/package.xml")
 endif()
 
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/refbox_comm" TYPE PROGRAM FILES "/home/sergio/LogisticsPlanner/catkin_ws/build/RefBoxComm/refbox_comm/catkin_generated/installspace/planner.py")
+endif()
+

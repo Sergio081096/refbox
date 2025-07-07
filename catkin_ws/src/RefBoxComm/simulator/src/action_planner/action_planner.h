@@ -24,6 +24,7 @@
 #include "simulator/MotionPlanner.h"
 #include "simulator/FindObject.h"
 #include "../simulator_physics/prb_failure_actions.h"
+#include "../simrep/SimuladorRepresentation.h"
 //#include "simulator/ActionPlanner.h"
 
 #ifndef PI
@@ -155,6 +156,10 @@ int action_planner(float px, float py, float theta, Actions *plan, int num_pl){
     int dummy,d;
     int flg_clp=0;
 
+    ros::NodeHandle n;
+
+    SimuladorRepresentation::setNodeHandle(&n);
+
 
     if(init_flg==1){
 
@@ -166,10 +171,10 @@ int action_planner(float px, float py, float theta, Actions *plan, int num_pl){
     }
 
 
-    flg_clp=0;
+    // flg_clp=0;
     while(flg_clp == 0){
         SimuladorRepresentation::strQueryKDB("(assert (alive clips))", result, 10000);
-        sscanf(result.c_str(),"%s %s %d",ROS_System,action,&flg_clp);
+        sscanf(result.c_str(),"%s %s %d",ROS_System,action,&flg_clp); 
     }
 
     sprintf(str,"(assert (get-num-plans-total))");

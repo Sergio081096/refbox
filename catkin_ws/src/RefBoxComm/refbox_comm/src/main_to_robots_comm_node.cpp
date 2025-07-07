@@ -16,62 +16,6 @@ using namespace std;
 //int total_instructions = 24;//TODO CHANGE
 
 vector<vector<std::string>> plans[3];
-/*
-vector<std::string> debug_instructions_1 = {
-    "goto CS M_Z47 0 platform",
-    "find CAP_GREY",
-    "take CAP_GREY",
-    "move entrance",
-    "drop CAP_GREY",
-    "ask take CAP_GREY",
-    "move output",
-    "find base_translucid",
-    "take base_translucid",
-    "move platform",
-    "drop base_translucid",
-    "goto BS M_Z33 180 output",
-    "ask base BASE_SILVER",
-    "find BASE_SILVER",
-    "take BASE_SILVER",
-    "goto CS M_Z47 0 entrance",
-    "drop BASE_SILVER",
-    "ask put cap",
-    "move output",
-    "find BASE_SILVER",
-    "take BASE_SILVER",
-    "goto DS M_Z64 90 entrance",
-    "drop BASE_SILVER",
-    "ask moveto 2"
-    };
-
-vector<std::string> debug_instructions_2 = {
-    "goto CS M_Z45 0 platform",
-    "find CAP_BLACK",
-    "take CAP_BLACK",
-    "move entrance",
-    "drop CAP_BLACK",
-    "ask take CAP_BLACK",
-    "move output",
-    "find base_translucid",
-    "take base_translucid",
-    "move platform",
-    "drop base_translucid",
-    "goto BS C_Z53 180 output",
-    "ask base BASE_RED",
-    "find BASE_RED",
-    "take BASE_RED",
-    "goto CS C_Z47 0 entrance",
-    "drop BASE_RED",
-    "ask put cap",
-    "move output",
-    "find BASE_RED",
-    "take BASE_RED",
-    "goto DS M_Z22 90 entrance",
-    "drop BASE_RED",
-    "ask moveto 3"
-    };
-
-    vector<vector<std::string>> debug_vector;*/
 
 ros::Subscriber plan_sub;
 
@@ -156,10 +100,6 @@ std::cout << " waiting client " << std::endl;
         read_size = recv(client_socket , &buffer , sizeof(unsigned char), 0);
 
         std::ostringstream ss;
-        // std::cout << "msg received-<" << buffer << std::endl;
-        /*
-        n - next instruction
-         */
 
         tmp_str = "";
 
@@ -220,69 +160,11 @@ std::cout << " waiting client " << std::endl;
 
                 }
             }
-            /*
-            if(instruction_counter < plans_size[plan_assigned[robot_no]]){
-                //tmp_str = plans[plan_assigned[robot_no]][instruction_counter]; //debug_instructions_festino[instruction_counter];
-                //string instruction = tmp_str.substr(8, tmp_str.size());
-
-                instruction_counter++;
-                ROS_INFO_STREAM("Single_instruction:" << tmp_str << ":");
-
-                ss << tmp_str;
-
-                write_size = write(client_socket, ss.str().c_str(), ss.str().size());
-            } else {
-                write_size = write(client_socket, "done", 4);
-            }*/
             break;
         
         default:
             break;
         }
-        /*
-        //read_size = recv(client_socket , &buffer , sizeof(unsigned char), 0);
-        read_size = read(client_socket, buffer, 3);
-        if(instruction_counter < total_instructions){
-            string tmp_str = "";
-
-            if(robot_no == 0){
-                tmp_str = debug_instructions_festino[instruction_counter];
-            }
-            if(robot_no == 1){
-                tmp_str = debug_instructions_festina[instruction_counter];
-            }
-            instruction_counter++;
-
-            string instruction = tmp_str.substr(8, tmp_str.size());
-            ROS_INFO_STREAM("Single_instruction:" << instruction << ":");
-
-            std::ostringstream ss;
-            ss << instruction;
-
-            write_size = write(client_socket, ss.str().c_str(), ss.str().size());
-
-
-        } else {
-            write_size = write(client_socket, "done", 4);
-        }
-*/
-
-    /*
-        std::cout << "message from robot " << robot_no << " is: " << buffer << std::endl;
-
-        std::ostringstream oss;
-
-        if(buffer[0] == 'm' && buffer[1] == 's'){
-            oss << "navigate_to_kitchen";
-            write_size = write(client_socket, oss.str().c_str(), oss.str().size());
-        } else {
-            oss << "hello robot no " << robot_no << " Im the main server ";
-            write_size = write(client_socket, oss.str().c_str(), oss.str().size());
-        }
-    */
-
-
-
     }
 }
 
@@ -350,24 +232,7 @@ int main(int argc, char** argv){
 
     signal(SIGINT, sig_handler);
 
-/*
-    struct sigaction sa;
-    sa.sa_handler = sig_handler;
-    sigemptyset(&sa.sa_mask);
-    sa.sa_flags = SA_RESTART; // Restart functions if interrupted by handler
-    if (sigaction(SIGINT, &sa, NULL) == -1)
-        // Handle error
-*/
-/*
-    std::cout << "start" << std::endl;
-    //if(plans_robot_1[0] == nullptr){
-std::cout << plans_robot_1[0].size() << std::endl;
-    //}
-    //if(plans_robot_1[1] == nullptr){
-std::cout << plans_robot_1[1].size() << std::endl;
-    //}
-std::cout << "end" << std::endl;*/
-    //ros::init(argc, argv, "main_to_robots_comm_node");
+
     ros::init(argc, argv, "main_to_robots_comm_node", ros::init_options::NoSigintHandler);
     ros::NodeHandle n;
 

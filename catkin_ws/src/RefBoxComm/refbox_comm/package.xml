@@ -52,6 +52,7 @@
 
 
   <build_depend>roscpp</build_depend>
+  <build_depend>rospy</build_depend>
   <build_depend>protobuf_comm</build_depend>
   <build_depend>refbox_protobuf_msgs</build_depend>
   <build_depend>geometry_msgs</build_depend>

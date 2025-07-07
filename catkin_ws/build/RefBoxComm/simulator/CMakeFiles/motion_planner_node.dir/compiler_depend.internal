@@ -64,6 +64,7 @@ RefBoxComm/simulator/CMakeFiles/motion_planner_node.dir/src/motion_planner/motio
  /home/sergio/LogisticsPlanner/catkin_ws/devel/include/simulator/simulator_stop.h
  /home/sergio/LogisticsPlanner/catkin_ws/devel/include/simulator/simulator_stopRequest.h
  /home/sergio/LogisticsPlanner/catkin_ws/devel/include/simulator/simulator_stopResponse.h
+ /home/sergio/LogisticsPlanner/catkin_ws/src/RefBoxComm/simulator/src/simrep/SimuladorRepresentation.h
  /home/sergio/LogisticsPlanner/catkin_ws/src/RefBoxComm/simulator/src/simulator_physics/prb_failure_actions.h
  /home/sergio/LogisticsPlanner/catkin_ws/src/RefBoxComm/simulator/src/action_planner/action_planner.h
  /home/sergio/LogisticsPlanner/catkin_ws/src/RefBoxComm/simulator/src/behaviors/oracle.h
