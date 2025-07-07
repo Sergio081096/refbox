@@ -1,8 +1,0 @@
-prefix=/home/sergio/LogisticsPlanner/catkin_ws/install
-
-Name: protobuf_comm
-Description: Description of protobuf_comm
-Version: 0.0.0
-Cflags: -I${prefix}/include
-Libs: -L${prefix}/lib -lprotobuf_comm
-Requires: 

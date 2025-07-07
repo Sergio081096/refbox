@@ -1,1 +1,0 @@
-/usr/bin/c++ -rdynamic CMakeFiles/tug_protobuf_cpp_example_node.dir/src/example_node.cpp.o -o /home/sergio/LogisticsPlanner/catkin_ws/devel/lib/tug_protobuf_cpp_example/tug_protobuf_cpp_example_node  -Wl,-rpath,/home/sergio/LogisticsPlanner/catkin_ws/devel/lib /home/sergio/LogisticsPlanner/catkin_ws/devel/lib/libtug_protobuf_example_msg_proto.so -lprotobuf 

@@ -1,8 +1,0 @@
-prefix=/home/sergio/LogisticsPlanner/catkin_ws/devel
-
-Name: tug_laser_filters
-Description: Description of tug_laser_filters
-Version: 0.0.0
-Cflags: -I/home/sergio/LogisticsPlanner/catkin_ws/src/RefBoxComm/utils/tug_laser_filters/include
-Libs: -L${prefix}/lib 
-Requires: 

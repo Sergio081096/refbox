@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC -shared -Wl,-soname,libtug_protobuf_example_msg_proto.so -o /home/sergio/LogisticsPlanner/catkin_ws/devel/lib/libtug_protobuf_example_msg_proto.so CMakeFiles/tug_protobuf_example_msg_proto.dir/home/sergio/LogisticsPlanner/catkin_ws/devel/include/tug_protobuf_example_msg/example_msg.pb.cc.o  -lprotobuf 

@@ -1,7 +1,0 @@
-set(tug_joy_SETUP_PY_SETUP_MODULE "distutils.core")
-set(tug_joy_SETUP_PY_VERSION "0.0.0")
-set(tug_joy_SETUP_PY_SCRIPTS "")
-set(tug_joy_SETUP_PY_PACKAGES "tug_joy")
-set(tug_joy_SETUP_PY_PACKAGE_DIRS "src/tug_joy")
-set(tug_joy_SETUP_PY_MODULES "")
-set(tug_joy_SETUP_PY_MODULE_DIRS "")
